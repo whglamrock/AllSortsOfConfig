@@ -7,6 +7,12 @@ export ZSH="/Users/haowwu/.oh-my-zsh"
 
 export http_proxy=http://www-proxy-hqdc.us.oracle.com:80
 export https_proxy=http://www-proxy-hqdc.us.oracle.com:80
+export no_proxy='localhost,127.0.0.1,.oracle.com,.oracleiaas.com,.oraclecloud.com,.oraclecorp.com,.grungy.us'
+
+# Note: maven 3.5.4 is recommended as latest=3.6.0 currently(Jan-2019) has 'findbugs' discrepancies observed
+export M3_HOME="/Applications/apache-maven-3.6.3" 
+export M3=$M3_HOME/bin
+export PATH=$M3:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
