@@ -126,3 +126,18 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+
+# ssh agent method set up; for more detail, refer to: 
+# https://bitbucket.oci.oraclecorp.com/projects/SECEDGE/repos/ssh_configs/browse
+
+# Yubikey handler
+reload-ssh() {
+   ssh-add -e /usr/local/lib/opensc-pkcs11.so >> /dev/null
+   if [ $? -gt 0 ]; then
+       echo "Failed to remove previous card"
+   fi
+   ssh-add -s /usr/local/lib/opensc-pkcs11.so
+}
+
+
