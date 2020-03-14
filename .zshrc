@@ -14,6 +14,8 @@ export M3_HOME="/Applications/apache-maven-3.6.3"
 export M3=$M3_HOME/bin
 export PATH=$M3:$PATH
 
+export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -126,4 +128,81 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+
+alias sshr1ad1="ssh -v -t -L 127.0.0.1:8081:ingress-proxy.svc.ad1.r1:8080 bastion-ad1.rb.r1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshr1ad2="ssh -v -t -L 127.0.0.1:8081:ingress-proxy.svc.ad2.r1:8080 bastion-ad2.rb.r1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshr2ad1="ssh -v -t -L 127.0.0.1:8082:ingress-proxy.svc.ad1.r2:8080 bastion-ad1.rb.us-phoenix-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshr2ad2="ssh -v -t -L 127.0.0.1:8082:ingress-proxy.svc.ad2.r2:8080 bastion-ad2.rb.us-phoenix-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshr2ad3="ssh -v -t -L 127.0.0.1:8082:ingress-proxy.svc.ad3.r2:8080 bastion-ad3.rb.us-phoenix-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshiadad1="ssh -v -t -L 127.0.0.1:8083:ingress-proxy.svc.ad1.us-ashburn-1:8080 bastion-ad1.rb.us-ashburn-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshiadad2="ssh -v -t -L 127.0.0.1:8083:ingress-proxy.svc.ad2.us-ashburn-1:8080 bastion-ad2.rb.us-ashburn-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshiadad3="ssh -v -t -L 127.0.0.1:8083:ingress-proxy.svc.ad3.us-ashburn-1:8080 bastion-ad3.rb.us-ashburn-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshfraad1="ssh -v -t -L 127.0.0.1:8084:ingress-proxy.svc.ad1.eu-frankfurt-1:8080 bastion-ad1.rb.eu-frankfurt-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshfraad2="ssh -v -t -L 127.0.0.1:8084:ingress-proxy.svc.ad2.eu-frankfurt-1:8080 bastion-ad2.rb.eu-frankfurt-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshfraad3="ssh -v -t -L 127.0.0.1:8084:ingress-proxy.svc.ad3.eu-frankfurt-1:8080 bastion-ad3.rb.eu-frankfurt-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshlhrad1="ssh -v -t -L 127.0.0.1:8085:ingress-proxy.svc.ad1.uk-london-1:8080 bastion-ad1.rb.uk-london-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshlhrad2="ssh -v -t -L 127.0.0.1:8085:ingress-proxy.svc.ad2.uk-london-1:8080 bastion-ad2.rb.uk-london-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshlhrad3="ssh -v -t -L 127.0.0.1:8085:ingress-proxy.svc.ad3.uk-london-1:8080 bastion-ad3.rb.uk-london-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshyyzad1="ssh -v -t -L 127.0.0.1:8086:ingress-proxy.svc.ad1.ca-toronto-1:8080 bastion-ad1.rb.ca-toronto-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshnrtad1="ssh -v -t -L 127.0.0.1:8087:ingress-proxy.svc.ad1.ap-tokyo-1:8080 bastion-ad1.rb.ap-tokyo-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshicnad1="ssh -v -t -L 127.0.0.1:8088:ingress-proxy.svc.ad1.ap-seoul-1:8080 bastion-ad1.rb.ap-seoul-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshbomad1="ssh -v -t -L 127.0.0.1:8089:ingress-proxy.svc.ad1.ap-mumbai-1:8080 bastion-ad1.rb.ap-mumbai-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshzrhad1="ssh -v -t -L 127.0.0.1:8090:ingress-proxy.svc.ad1.eu-zurich-1:8080 bastion-ad1.rb.eu-zurich-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshgruad1="ssh -v -t -L 127.0.0.1:8091:ingress-proxy.svc.ad1.sa-saopaulo-1:8080 bastion-ad1.rb.sa-saopaulo-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshsydad1="ssh -v -t -L 127.0.0.1:8092:ingress-proxy.svc.ad1.ap-sydney-1:8080 bastion-ad1.rb.ap-sydney-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshjedad1="ssh -v -t -L 127.0.0.1:8093:ingress-proxy.svc.ad1.me-jeddah-1:8080 bastion-ad1.rb.me-jeddah-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshamsad1="ssh -v -t -L 127.0.0.1:8094:ingress-proxy.svc.ad1.eu-amsterdam-1:8080 bastion-ad1.rb.eu-amsterdam-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshkixad1="ssh -v -t -L 127.0.0.1:8095:ingress-proxy.svc.ad1.ap-osaka-1:8080 bastion-ad1.rb.ap-osaka-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshmelad1="ssh -v -t -L 127.0.0.1:8096:ingress-proxy.svc.ad1.ap-melbourne-1:8080 bastion-ad1.rb.ap-melbourne-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshyulad1="ssh -v -t -L 127.0.0.1:8097:ingress-proxy.svc.ad1.ca-montreal-1:8080 bastion-ad1.rb.ca-montreal-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshhydad1="ssh -v -t -L 127.0.0.1:8098:ingress-proxy.svc.ad1.ap-hyderabad-1:8080 bastion-ad1.rb.ap-hyderabad-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshynyad1="ssh -v -t -L 127.0.0.1:8099:ingress-proxy.svc.ad1.ap-chuncheon-1:8080 bastion-ad1.rb.ap-chuncheon-1.oci.oracleiaas.com watch -n 90 date"
+
+alias sshlfiad1="ssh -v -t -L 127.0.0.1:9090:ingress-proxy.svc.ad1.us-langley-1:8080 bastion-ad1.us-langley-1.oraclegoviaas.com watch -n 90 date"
+
+alias sshlufad1="ssh -v -t -L 127.0.0.1:9091:ingress-proxy.svc.ad1.us-luke-1:8080 bastion-ad1.us-luke-1.oraclegoviaas.com watch -n 90 date"
+
+alias sshricad1="ssh -v -t -L 127.0.0.1:7070:ingress-proxy.svc.ad1.us-gov-ashburn-1:8080 bastion-ad1.us-gov-ashburn-1.oraclegoviaas.com watch -n 90 date"
+
+alias sshtusad1="ssh -v -t -L 127.0.0.1:7072:ingress-proxy.svc.ad1.us-gov-phoenix-1:8080 bastion-ad1.us-gov-phoenix-1.oraclegoviaas.com watch -n 90 date"
+
+alias sshpiaad1="ssh -v -t -L 127.0.0.1:7071:ingress-proxy.svc.ad1.us-gov-chicago-1:8080 bastion-ad1.us-gov-chicago-1.oraclegoviaas.com watch -n 90 date"
+
+alias sshltnad1="ssh -v -t -L 127.0.0.1:10091:ingress-proxy.svc.ad1.uk-gov-london-1:8080 bastion-ad1.rb.uk-gov-london-1.oraclegoviaas.uk watch -n 90 date"
+
+alias sshtiwad1="ssh -v -t -L 127.0.0.1:10201:ingress-proxy.svc.ad1.us-tacoma-1:8080 bastion-ad1.rb.us-tacoma-1.oci.oracleonsriaas.com watch -n 90 date"
+
+
+
+
+
+
 
